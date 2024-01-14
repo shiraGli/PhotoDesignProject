@@ -1,0 +1,17 @@
+C:\Users\user1\Desktop\Library\Solid.Data\bin\Debug\net6.0\Library.Data.deps.json
+C:\Users\user1\Desktop\Library\Solid.Data\bin\Debug\net6.0\Library.Data.runtimeconfig.json
+C:\Users\user1\Desktop\Library\Solid.Data\bin\Debug\net6.0\Library.Data.dll
+C:\Users\user1\Desktop\Library\Solid.Data\bin\Debug\net6.0\Library.Data.pdb
+C:\Users\user1\Desktop\Library\Solid.Data\bin\Debug\net6.0\Library.Core.dll
+C:\Users\user1\Desktop\Library\Solid.Data\bin\Debug\net6.0\Library.Core.pdb
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.AssemblyInfo.cs
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.csproj.CopyComplete
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.dll
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\refint\Library.Data.dll
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.pdb
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\Library.Data.genruntimeconfig.cache
+C:\Users\user1\Desktop\Library\Solid.Data\obj\Debug\net6.0\ref\Library.Data.dll

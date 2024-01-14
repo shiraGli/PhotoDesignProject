@@ -8,6 +8,8 @@ namespace Solid.Core.Entities
 {
     public class Books_on_loan
     {
-        int id { get; set; }
+       public int Id { get; set; }
+        
+        
     }
 }

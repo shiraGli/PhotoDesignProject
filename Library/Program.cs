@@ -12,8 +12,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //builder.Services.AddSingleton<DataContext>();
-builder.Services.AddScoped<ICustomerRepository,CustomerRepository>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerServise, CustomerServise>();
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IAccountServise, AccountServise>();
+builder.Services.AddScoped<IWriterRepository, WriterRepository>();
+builder.Services.AddScoped<IWriterServise, WriterServise>();
+builder.Services.AddScoped<ILendRepository, LendRepository>();
+builder.Services.AddScoped<ILendServise, LendServise>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IBookServise, BookServise>();
+builder.Services.AddScoped<IBook_on_loanRepository, Book_on_loanRepository>();
+builder.Services.AddScoped<IBook_on_loanServise, Book_on_loanServise>();
+builder.Services.AddScoped<ICityRepository, CityRepository>();
+builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddDbContext<DataContext>();
 
 

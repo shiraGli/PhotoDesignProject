@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user1\\Desktop\\Library\\Library\\Library\\Library.csproj": {}
+    "C:\\Users\\user1\\Desktop\\Library\\Library\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user1\\Desktop\\Library\\Library\\Library\\Library.csproj": {
+    "C:\\Users\\user1\\Desktop\\Library\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Library\\Library\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Library\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Library\\Library.csproj",
+        "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Library\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Servise\\Solid.Servise.csproj": {
-                "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Servise\\Solid.Servise.csproj"
+              "C:\\Users\\user1\\Desktop\\Library\\Solid.Servise\\Solid.Servise.csproj": {
+                "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Servise\\Solid.Servise.csproj"
               }
             }
           }
@@ -82,14 +82,14 @@
         }
       }
     },
-    "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Core\\Solid.Core.csproj": {
+    "C:\\Users\\user1\\Desktop\\Library\\Solid.Core\\Solid.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Core\\Solid.Core.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Library\\Solid.Core\\Solid.Core.csproj",
         "projectName": "Solid.Core",
-        "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Core\\Solid.Core.csproj",
+        "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Core\\Solid.Core.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Core\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -141,14 +141,14 @@
         }
       }
     },
-    "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Data\\Solid.Data.csproj": {
+    "C:\\Users\\user1\\Desktop\\Library\\Solid.Data\\Solid.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Data\\Solid.Data.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Library\\Solid.Data\\Solid.Data.csproj",
         "projectName": "Solid.Data",
-        "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Data\\Solid.Data.csproj",
+        "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Data\\Solid.Data.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Data\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -169,8 +169,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Core\\Solid.Core.csproj": {
-                "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Core\\Solid.Core.csproj"
+              "C:\\Users\\user1\\Desktop\\Library\\Solid.Core\\Solid.Core.csproj": {
+                "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Core\\Solid.Core.csproj"
               }
             }
           }
@@ -216,14 +216,14 @@
         }
       }
     },
-    "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Servise\\Solid.Servise.csproj": {
+    "C:\\Users\\user1\\Desktop\\Library\\Solid.Servise\\Solid.Servise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Servise\\Solid.Servise.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Library\\Solid.Servise\\Solid.Servise.csproj",
         "projectName": "Solid.Servise",
-        "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Servise\\Solid.Servise.csproj",
+        "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Servise\\Solid.Servise.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Servise\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Servise\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -244,8 +244,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Data\\Solid.Data.csproj": {
-                "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Data\\Solid.Data.csproj"
+              "C:\\Users\\user1\\Desktop\\Library\\Solid.Data\\Solid.Data.csproj": {
+                "projectPath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Data\\Solid.Data.csproj"
               }
             }
           }

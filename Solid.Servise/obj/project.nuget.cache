@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D+c9OaH7xuF6Vrw/RnEP0DEva+jD+DaqpIBtu1BU/XpoUQtDZeJ6ixbBlFn/vt4v8byVVMVzeM9WtQcmQ/vVtg==",
+  "dgSpecHash": "q9JM/18lKItM2hfbORFs57q2t1Es6lVQ3H9dNP548pvk3Lj3wj7xoMK7mvF8Xcdxg7DtQOUCFZlOGWF+qfLv5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\Library\\Library\\Solid.Servise\\Solid.Servise.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Servise\\Solid.Servise.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
