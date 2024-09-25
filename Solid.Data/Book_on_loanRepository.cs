@@ -19,5 +19,22 @@ namespace Solid.Data
         {
             return _context.books_on_loan.ToList();
         }
+        public Books_on_loan GetIdBoookOnLoan(int id)
+        {
+           var books_on_loan = _context.books_on_loan.Find(id);
+            return books_on_loan;
+        }
+        public void AddBookOnLoan(Books_on_loan b)
+        {
+            _context.books_on_loan.Add(b);
+            _context.SaveChanges();
+        }
+        public void DeleteBookOnLoan(int id)
+        {
+           
+            var books_on_loan=GetIdBoookOnLoan(id);
+            _context.books_on_loan.Remove(books_on_loan);
+            _context.SaveChanges();
+        }
     }
 }

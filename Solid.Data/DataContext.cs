@@ -10,9 +10,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Solid.Data
 {
     public class DataContext: DbContext
-    {
+    { 
         public DbSet<Customer> customers { get; set; }
-        public DbSet<City> city { get; set; }
         public DbSet<Book> book { get; set; }
         public DbSet<Account> account { get; set; }
         public DbSet<Books_on_loan> books_on_loan { get; set; }
@@ -22,7 +21,7 @@ namespace Solid.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=shiraLibrary_db");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=shira_Library_db");
         }
 
     }

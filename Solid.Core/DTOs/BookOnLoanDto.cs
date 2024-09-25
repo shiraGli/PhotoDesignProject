@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Solid.Core.Repository
+namespace Solid.Core.DTOs
 {
-    public interface ICityRepository
+    public class BookOnLoanDto
     {
-        public List<City> GetAlllCity();
+        public int BookId { get; set; }
+       
+        public int LendId { get; set; }
     }
 }

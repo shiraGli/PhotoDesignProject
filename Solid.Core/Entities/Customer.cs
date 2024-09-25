@@ -10,11 +10,13 @@ namespace Solid.Core.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Password { get; set; } 
         public string Email { get; set; }
         public int Sum { get; set; }
-        public int  Count_Book { get; set; }
+       
         public int Max { get; set; }
-
+        public List<Account>accounts { get; set; }  //לא מציג לנו במערך כלום
+                                                    //אפילו שיש שם נתונים
 
     }
 }

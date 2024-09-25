@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8rhpYvBsanSKCOzROeJBPG6wT2AFnL9sTXoVzUOddVZOikoTGuinMo7HJ/kqBeA2dTHo8z/f7ReJX+vbL2XwTw==",
+  "dgSpecHash": "VSIqM9WuTlaXz3lM1Tl/GpwDXCa4nWXTQHel3+RBkWczAHQwgS0jRsTYlsM3TZ+rLDn7M3nUd0tuEeUd0BwNqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Data\\Solid.Data.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\פרויקט אנגולר\\Library\\Solid.Data\\Solid.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user1\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

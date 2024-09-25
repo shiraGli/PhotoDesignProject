@@ -20,5 +20,24 @@ namespace Solid.Servise
         {
             return _book_on_loanRepository.GetAlllBooks_on_loan();
         }
+        
+        //public void DeleteBookOnLoan(int id)
+        //{
+        //    _book_on_loanRepository.DeleteBookOnLoan(id);
+        //}
+        public void AddBookOnLoan(Books_on_loan b)
+        {
+            _book_on_loanRepository.AddBookOnLoan(b);
+        }
+        public Books_on_loan GetIdBoookOnLoan(int id)
+        {
+            return _book_on_loanRepository.GetIdBoookOnLoan(id);
+        }
+        public void DeleteBookOnLoan(int id)
+        {
+            var bookOnLoanArr = _book_on_loanRepository.GetAlllBooks_on_loan();
+            var book=bookOnLoanArr.Find(a => a.BookId == id);
+            _book_on_loanRepository.DeleteBookOnLoan(book.Id);
+        }
     }
 }

@@ -10,7 +10,10 @@ namespace Solid.Core.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }    
-        public int Count { get; set; }  
+        public int Count { get; set; }
+        public  Writer Writer { get; set; }
+        public int WriterId { get; set; }   
+
 
     }
 }

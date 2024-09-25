@@ -20,5 +20,18 @@ namespace Solid.Servise
         {
             return _writerRepository.GetAlllWriter();
         }
+        public void AddWriter(Writer w)
+        {
+            _writerRepository.AddWriter(w);
+        }
+        public Writer GetIdWriter(int id)
+        {
+            return _writerRepository.GetIdWriter(id);
+        }
+        public void DeleteWriter(int id)
+        {
+            _writerRepository.DeleteWriter(id);
+        }
+
     }
 }

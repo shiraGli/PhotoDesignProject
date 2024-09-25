@@ -21,6 +21,23 @@ namespace Solid.Servise
         {
             return _accountRepository.GetAlllAccount();
         }
+        public int AddAccount(Account a)
+        {
+            return _accountRepository.AddAccount(a);
+        }
+        public Account GetIdAccount(int id)
+        {
+            return _accountRepository.GetIdAccount(id);
+        }
+        public void DeleteAccount(int id)
+        {
+            _accountRepository.deleteAccount(id);
+        }
+        public Account updateAccount(int id, Boolean flag)
+        {
+            return _accountRepository.updateAccount(id,flag);
+        }
+
     }
 
 }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "q9JM/18lKItM2hfbORFs57q2t1Es6lVQ3H9dNP548pvk3Lj3wj7xoMK7mvF8Xcdxg7DtQOUCFZlOGWF+qfLv5g==",
+  "dgSpecHash": "kHq2OfZT3WV4YewaO4Om269HvehDBuz5MwwbGJxZUMMbksaQC9fUskldnLOCQUGpOemQJM5YDqfaUVsIcZiYqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\Library\\Solid.Servise\\Solid.Servise.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\פרויקט אנגולר\\Library\\Solid.Servise\\Solid.Servise.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user1\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

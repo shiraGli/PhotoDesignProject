@@ -20,5 +20,21 @@ namespace Solid.Servise
         {
             return _bookRepository.GetAlllBook();
         }
+        public Book GetIdBook(int id)
+        {
+            return _bookRepository.GetIdBook(id);  
+        }
+        public void AddBook(Book b)
+        {
+            _bookRepository.AddBook(b);
+        }
+        public Book updateBook(int id,int count)
+        {
+           return _bookRepository.UpdateBook(id,count);
+        }
+        public void DeleteBook(int id)
+        {
+            _bookRepository.DeleteBook(id);
+        }
     }
 }

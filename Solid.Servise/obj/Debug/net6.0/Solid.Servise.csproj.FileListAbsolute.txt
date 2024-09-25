@@ -15,3 +15,20 @@ C:\Users\user1\Desktop\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.dll
 C:\Users\user1\Desktop\Library\Solid.Servise\obj\Debug\net6.0\refint\Solid.Servise.dll
 C:\Users\user1\Desktop\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.pdb
 C:\Users\user1\Desktop\Library\Solid.Servise\obj\Debug\net6.0\ref\Solid.Servise.dll
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\bin\Debug\net6.0\Solid.Servise.deps.json
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\bin\Debug\net6.0\Solid.Servise.dll
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\bin\Debug\net6.0\Solid.Servise.pdb
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\bin\Debug\net6.0\Solid.Core.dll
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\bin\Debug\net6.0\Solid.Data.dll
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\bin\Debug\net6.0\Solid.Data.pdb
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\bin\Debug\net6.0\Solid.Core.pdb
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.AssemblyInfo.cs
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.csproj.CopyComplete
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.dll
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\refint\Solid.Servise.dll
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\Solid.Servise.pdb
+C:\Users\user1\Desktop\פרויקט אנגולר\Library\Solid.Servise\obj\Debug\net6.0\ref\Solid.Servise.dll

@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Library.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Solid.Core.DTOs;
 using Solid.Core.Entities;
 using Solid.Core.Servise;
 
@@ -11,28 +14,38 @@ namespace Library.Controllers
     public class WriterController : ControllerBase
     {
         private readonly IWriterServise _writerServise;
-        public WriterController(IWriterServise writerServise)
+        private readonly IMapper _mapper;
+        public WriterController(IWriterServise writerServise,IMapper mapper)
         {
             _writerServise = writerServise;
+            _mapper = mapper;   
         }
         // GET: api/<WriterController>
         [HttpGet]
-        public ActionResult<Writer> Get()
+        public ActionResult<WriterDto> Get()
         {
-            return Ok(_writerServise.GetWriter());  
+            var list = _writerServise.GetWriter();
+            var listDto = _mapper.Map < IEnumerable < WriterDto >>(list);
+            return Ok(listDto);
         }
 
         // GET api/<WriterController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult<WriterDto> Get(int id)
         {
-            return "value";
+            var writer=_writerServise.GetIdWriter(id);
+            var writerDto=_mapper.Map<WriterDto>(writer);   
+            if (writer != null)
+                return writerDto;
+            return NotFound();
         }
 
         // POST api/<WriterController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] WriterPostModel w)
         {
+            var writer=_mapper.Map<Writer>(w);
+            _writerServise.AddWriter(writer);
         }
 
         // PUT api/<WriterController>/5
@@ -45,6 +58,45 @@ namespace Library.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _writerServise.DeleteWriter(id);    
         }
+        //    public Writer ConvertModelToClient(Writer2 cm)
+        //    {
+        //        return new Writer()
+        //        {
+        //            id = cm.id,
+        //            name = cm.name
+        //        };
+        //    }
+
+        //    public Writer2 ConvertClientToModel(Writer c)
+        //    {
+        //        return new Writer2()
+        //        {
+        //            id = c.id,
+        //            name = c.name
+        //        };
+        //    }
+
+        //    public List<Writer> ConvertListModelToListClient(List<Writer2> lc)
+        //    {
+        //        List<Writer> list = new List<Writer>();
+        //        foreach (Writer2 item in lc)
+        //        {
+        //            list.Add(ConvertModelToClient(item));
+        //        }
+        //        return list;
+        //    }
+        //    public List<Writer2> ConvertListClientToListModel(List<Writer> lc)
+        //    {
+        //        List<Writer2> list = new List<Writer2>();
+        //        foreach (Writer item in lc)
+        //        {
+        //            list.Add(ConvertClientToModel(item));
+        //        }
+        //        return list;
+        //    }
+
+        //}
     }
 }

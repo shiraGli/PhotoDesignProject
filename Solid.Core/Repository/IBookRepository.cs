@@ -10,5 +10,9 @@ namespace Solid.Core.Repository
     public interface IBookRepository
     {
         public List<Book> GetAlllBook();
+        public Book GetIdBook(int id);
+        public void AddBook(Book b);
+        public void DeleteBook(int id);
+        public Book UpdateBook(int id,int count);
     }
 }

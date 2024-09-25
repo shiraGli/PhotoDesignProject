@@ -10,5 +10,9 @@ namespace Solid.Core.Repository
     public interface IAccountRepository
     {
         public List<Account> GetAlllAccount();
+        public int AddAccount(Account a);
+        public void deleteAccount(int id);
+        public Account GetIdAccount(int id);
+        public Account updateAccount(int id, Boolean flag);
     }
 }

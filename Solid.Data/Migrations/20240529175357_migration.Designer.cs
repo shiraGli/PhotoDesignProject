@@ -12,8 +12,8 @@ using Solid.Data;
 namespace Solid.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240113201404_createDb")]
-    partial class createDb
+    [Migration("20240529175357_migration")]
+    partial class migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,17 +32,18 @@ namespace Solid.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Month")
+                    b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Month")
+                        .HasColumnType("int");
 
                     b.Property<bool>("pay")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("account");
                 });
@@ -62,7 +63,12 @@ namespace Solid.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("WriterId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("WriterId");
 
                     b.ToTable("book");
                 });
@@ -75,26 +81,19 @@ namespace Solid.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.HasKey("Id");
-
-                    b.ToTable("books_on_loan");
-                });
-
-            modelBuilder.Entity("Solid.Core.Entities.City", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("LendId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("city");
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("LendId");
+
+                    b.ToTable("books_on_loan");
                 });
 
             modelBuilder.Entity("Solid.Core.Entities.Customer", b =>
@@ -105,9 +104,6 @@ namespace Solid.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Count_Book")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -116,6 +112,10 @@ namespace Solid.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -135,10 +135,18 @@ namespace Solid.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("Date")
+                    b.Property<int>("Count_Book")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("date")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("lend");
                 });
@@ -158,6 +166,68 @@ namespace Solid.Data.Migrations
                     b.HasKey("id");
 
                     b.ToTable("writer");
+                });
+
+            modelBuilder.Entity("Solid.Core.Entities.Account", b =>
+                {
+                    b.HasOne("Solid.Core.Entities.Customer", "Customer")
+                        .WithMany("accounts")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("Solid.Core.Entities.Book", b =>
+                {
+                    b.HasOne("Solid.Core.Entities.Writer", "Writer")
+                        .WithMany("books")
+                        .HasForeignKey("WriterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Writer");
+                });
+
+            modelBuilder.Entity("Solid.Core.Entities.Books_on_loan", b =>
+                {
+                    b.HasOne("Solid.Core.Entities.Book", "book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Solid.Core.Entities.Lend", "Lend")
+                        .WithMany()
+                        .HasForeignKey("LendId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lend");
+
+                    b.Navigation("book");
+                });
+
+            modelBuilder.Entity("Solid.Core.Entities.Lend", b =>
+                {
+                    b.HasOne("Solid.Core.Entities.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("Solid.Core.Entities.Customer", b =>
+                {
+                    b.Navigation("accounts");
+                });
+
+            modelBuilder.Entity("Solid.Core.Entities.Writer", b =>
+                {
+                    b.Navigation("books");
                 });
 #pragma warning restore 612, 618
         }

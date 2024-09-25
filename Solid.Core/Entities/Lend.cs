@@ -9,8 +9,10 @@ namespace Solid.Core.Entities
     public class Lend
     {
        public int Id { get; set; }
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
+        public DateTime date { get; set; }
 
-       public DateTime Date { get; set; }
-
+        public int Count_Book { get; set; }
     }
 }

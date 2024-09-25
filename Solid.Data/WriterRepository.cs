@@ -19,5 +19,21 @@ namespace Solid.Data
         {
             return _context.writer.ToList();
         }
+        public void AddWriter(Writer w)
+        {
+            _context.Add(w);
+            _context.SaveChanges();
+        } 
+        public Writer GetIdWriter(int id)
+        {
+            var writer = _context.writer.Find(id);
+            return writer;
+        }
+        public void DeleteWriter(int id)
+        {
+            var writer = GetIdWriter(id);
+            _context.writer.Remove(writer);
+            _context.SaveChanges();
+        }
     }
 }

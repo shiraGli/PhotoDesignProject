@@ -1,7 +1,11 @@
+using AutoMapper;
+using Library.Mapping;
+using Solid.Core.Mapping;
 using Solid.Core.Repository;
 using Solid.Core.Servise;
 using Solid.Data;
 using Solid.Servise;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,10 +28,13 @@ builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookServise, BookServise>();
 builder.Services.AddScoped<IBook_on_loanRepository, Book_on_loanRepository>();
 builder.Services.AddScoped<IBook_on_loanServise, Book_on_loanServise>();
-builder.Services.AddScoped<ICityRepository, CityRepository>();
-builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddDbContext<DataContext>();
-
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.WriteIndented = true;
+});
+builder.Services.AddAutoMapper(typeof(ApiMappingProfile),typeof(MappingProfile));
 
 
 var app = builder.Build();
@@ -38,6 +45,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors(x => x
+.AllowAnyOrigin()
+.AllowAnyMethod()
+.AllowAnyHeader()
+);
 
 app.UseHttpsRedirection();
 

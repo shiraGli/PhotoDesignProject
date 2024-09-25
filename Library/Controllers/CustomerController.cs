@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Library.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Solid.Core.DTOs;
 using Solid.Core.Entities;
 using Solid.Core.Servise;
 using Solid.Servise;
@@ -14,29 +18,47 @@ namespace Library.Controllers
         // GET: api/<CustomerController>
 
         private readonly ICustomerServise _customerServise;
-        public CustomerController(ICustomerServise customerServise)
+        private readonly IMapper _mapper;
+
+        public CustomerController(ICustomerServise customerServise, IMapper mapper)
         {
             _customerServise = customerServise;
+            _mapper = mapper;
         }
         [HttpGet]
         public ActionResult<Customer> Get()
         {
-            return Ok(_customerServise.GetCustomer());
+            var list = _customerServise.GetCustomer();
+            var listDto = _mapper.Map<IEnumerable<CustomerDto>>(list);
+            return Ok(listDto);
         }
 
-        // GET api/<CustomerController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{password}+{name}")]
+        public bool GetCustomerPassword(string password, string name)
         {
-            return "value";
+            return _customerServise.GetCustomerPassword(password, name);
+        }
+
+
+        [HttpGet("{id}")]
+        public ActionResult<CustomerDto> Get(int id)
+        {
+            var customer = _customerServise.GetIdCustomer(id);
+            var customerDto = _mapper.Map<CustomerDto>(customer);
+            if (customer != null)
+                return customerDto;
+            return NotFound();
         }
 
         // POST api/<CustomerController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public Customer Post([FromBody] CustomerPostModel c)
         {
+            var customer = _mapper.Map<Customer>(c);
+            _customerServise.AddCustomer(customer);
+            return customer;
         }
-
+        
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
@@ -45,8 +67,11 @@ namespace Library.Controllers
 
         // DELETE api/<CustomerController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public int Delete(int id)
         {
+            _customerServise.DeleteCustomer(id);
+            return id;
         }
     }
 }
+

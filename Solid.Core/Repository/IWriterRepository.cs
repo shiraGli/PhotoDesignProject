@@ -10,5 +10,9 @@ namespace Solid.Core.Repository
     public interface IWriterRepository
     {
         public List<Writer> GetAlllWriter();
+        public void AddWriter(Writer w);
+        public Writer GetIdWriter(int id);
+        public void DeleteWriter(int id);
+
     }
 }
